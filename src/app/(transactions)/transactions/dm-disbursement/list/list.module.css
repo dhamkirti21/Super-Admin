@@ -1,0 +1,7 @@
+.scrollablebox{
+    height: 100%;   
+    overflow-y: scroll;
+}
+.scrollablebox::-webkit-scrollbar{
+    width:0px;
+}

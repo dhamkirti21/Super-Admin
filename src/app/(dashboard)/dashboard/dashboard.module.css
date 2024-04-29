@@ -1,0 +1,69 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow:scroll;
+}
+
+.Right::-webkit-scrollbar{
+  width:0px;
+}
+
+
+.RightItemOne {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RightItemOneItem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+  display: flex;
+  gap: 5px;
+  
+}
+
+.RightItemOneItem p{
+  font-size: 14px;
+  font-weight: 400;
+  color: #677788;
+}
+
+.RightItemOneItem select{
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #e7eaf3;
+  background: white;
+  border-radius: 4px;
+}
+
+.RightItemOneItem select:focus{
+  border-color: #24bac3;
+}
