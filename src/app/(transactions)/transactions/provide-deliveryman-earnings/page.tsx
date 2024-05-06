@@ -27,7 +27,7 @@ const WithDrawList = () => {
             sl: 1,
             name: "Rahim",
             receievedAt: "12/12/2021",
-            amount: "$1000",
+            amount: 1000,
             method: "Cash",
             reference: "Collect Cash"
         },
@@ -35,7 +35,7 @@ const WithDrawList = () => {
             sl: 2,
             name: "Karim",
             receievedAt: "12/12/2021",
-            amount: "$1000",
+            amount: 1000,
             method: "Cash",
             reference: "Collect Cash"
         },
@@ -43,7 +43,7 @@ const WithDrawList = () => {
             sl: 3,
             name: "Rahim",
             receievedAt: "12/12/2021",
-            amount: "$1000",
+            amount: 1000,
             method: "Cash",
             reference: "Collect Cash"
         }
@@ -64,7 +64,9 @@ const WithDrawList = () => {
                     width={25}
                     height={25}
                 />
-                <Typography variant="p" fontSize={"20px"} fontWeight={"600"}>Provide DeliveryMan Earning</Typography>
+                <Typography variant="body2" fontSize={"20px"} fontWeight={"600"}>
+                    Provide DeliveryMan Earning
+                </Typography>
             </div>
             <CustomBox>
                 <div
@@ -219,35 +221,37 @@ const WithDrawList = () => {
                     width: "104.25%",
                     marginLeft: "-23px",
                 }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        deliveryManData.map((data, index) => {
-                            return (
-                                <TableRow
-                                    key={index}
-                                    sl={data.sl}
-                                    name={data.name}
-                                    receievedAt={data.receievedAt}
-                                    amount={data.amount}
-                                    method={data.method}
-                                    reference={data.reference}
-                                />
-                            )
-                        })
-                    }
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            deliveryManData.map((data, index) => {
+                                return (
+                                    <TableRow
+                                        key={index}
+                                        sl={data.sl}
+                                        name={data.name}
+                                        receievedAt={data.receievedAt}
+                                        amount={data.amount}
+                                        method={data.method}
+                                        reference={data.reference}
+                                    />
+                                )
+                            })
+                        }
+                    </tbody>
                 </table>
             </CustomBox>
         </>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./dashboard.module.css";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import DataSwitcher from "@/components/Dashboard/DataSwitcher";
 import CustomCard from "@/components/Dashboard/CustomCard";
 import CustomNumberCard from "@/components/Dashboard/CustomNumberCard";
@@ -33,7 +33,7 @@ const Dashboard = () => {
         <>
             <div className={styles.RightItemOne}>
                 <div className={styles.RightItemOneItem}>
-                    <Image src={"/images/d1.png"} alt="dashboard" width={50} height={50} style={{ objectFit: "cover" }} />
+                    <Image loading="lazy" src={"/images/d1.png"} alt="dashboard" width={50} height={50} style={{ objectFit: "cover" }} />
                     <div style={{ display: "flex", gap: "5px", flexDirection: "column" }}>
                         <h3>Grocery Dashboard.</h3>
                         <p>Hello Here You Can Manage Your Grocery Orders by Zone.</p>

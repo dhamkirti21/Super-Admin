@@ -320,31 +320,33 @@ const WithDrawMethodList = () => {
                     width: "104.25%",
                     marginLeft: "-23px",
                 }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {methodData.map((data: MethodData, index) => {
                             return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
+                                <TableMethodRow
+                                    key={index}
+                                    sl={data.sl}
+                                    method_name={data.method_name}
+                                    method_fields={data.method_fields}
+                                    actions={data.actions}
+                                />
+                            );
                         })}
-                    </tr>
-                    {methodData.map((data: MethodData, index) => {
-                        return (
-                            <TableMethodRow
-                                key={index}
-                                sl={data.sl}
-                                method_name={data.method_name}
-                                method_fields={data.method_fields}
-                                actions={data.actions}
-                            />
-                        );
-                    })}
+                    </tbody>
                 </table>
             </Box>
         </>

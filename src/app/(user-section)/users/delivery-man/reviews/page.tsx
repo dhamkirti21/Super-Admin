@@ -117,44 +117,46 @@ const page = () => {
                     </div>
                 </div>
                 <table>
-                    <tr style={{
-                        backgroundColor: "#f5f5f5",
-                    }}>
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f5f5f5",
+                        }}>
+                            {
+
+                                titles.map((title, index) => {
+                                    return (
+                                        <th key={index} style={{
+                                            fontSize: "12px",
+                                            padding: "16px",
+                                            color: "#334257",
+                                            textAlign: "left",
+                                            backgroundColor: "#f5f5f5",
+                                        }}>{title}</th>
+
+                                    )
+                                })
+                            }
+                        </tr>
                         {
-
-                            titles.map((title, index) => {
+                            TableData.map((data, index) => {
                                 return (
-                                    <th key={index} style={{
-                                        fontSize: "12px",
-                                        padding: "16px",
-                                        color: "#334257",
-                                        textAlign: "left",
-                                        backgroundColor: "#f5f5f5",
-                                    }}>{title}</th>
-
+                                    <TableRowDeliveryManReview
+                                        key={index}
+                                        sl={data.sl}
+                                        orderId={data.orderId}
+                                        name={data.name}
+                                        link={data.link}
+                                        contactInfo={data.contactInfo}
+                                        imagePath={data.imagePath}
+                                        star={data.star}
+                                        customer={data.customer}
+                                        review={data.review}
+                                        action={data.action}
+                                    />
                                 )
                             })
                         }
-                    </tr>
-                    {
-                        TableData.map((data, index) => {
-                            return (
-                                <TableRowDeliveryManReview
-                                    key={index}
-                                    sl={data.sl}
-                                    orderId={data.orderId}
-                                    name={data.name}
-                                    link={data.link}
-                                    contactInfo={data.contactInfo}
-                                    imagePath={data.imagePath}
-                                    star={data.star}
-                                    customer={data.customer}
-                                    review={data.review}
-                                    action={data.action}
-                                />
-                            )
-                        })
-                    }
+                    </tbody>
                 </table>
             </CustomBox >
         </>

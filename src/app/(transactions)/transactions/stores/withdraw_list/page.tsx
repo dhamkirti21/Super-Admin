@@ -148,35 +148,36 @@ const WithDrawList = () => {
                     width: "104.25%",
                     marginLeft: "-23px",
                 }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        Wishlist_Data.map((data, index) => {
-                            return (
-                                <TableRow
-                                    key={index}
-                                    sl={data.sl}
-                                    amount={data.amount}
-                                    request_time={data.request_time}
-                                    store={data.store}
-                                    status={data.status}
-                                />
-                            )
-                        })
-                    }
-
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            Wishlist_Data.map((data, index) => {
+                                return (
+                                    <TableRow
+                                        key={index}
+                                        sl={data.sl}
+                                        amount={data.amount}
+                                        request_time={data.request_time}
+                                        store={data.store}
+                                        status={data.status}
+                                    />
+                                )
+                            })
+                        }
+                    </tbody>
                 </table>
             </CustomBox>
         </>

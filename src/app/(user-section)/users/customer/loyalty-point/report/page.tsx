@@ -244,37 +244,39 @@ const page = () => {
                     width: "104.25%",
                     marginLeft: "-23px",
                 }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        RowData.map((data, index) => {
-                            return (
-                                <TableRowReport
-                                    key={index}
-                                    sl={data.sl}
-                                    transaction_id={data.transaction_id}
-                                    customer_info={data.customer_info}
-                                    points_earned={data.points_earned}
-                                    points_converted={data.points_converted}
-                                    current_points_in_wallet={data.current_points_in_wallet}
-                                    transaction_type={data.transaction_type}
-                                    reference={data.reference}
-                                />
-                            )
-                        })
-                    }
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            RowData.map((data, index) => {
+                                return (
+                                    <TableRowReport
+                                        key={index}
+                                        sl={data.sl}
+                                        transaction_id={data.transaction_id}
+                                        customer_info={data.customer_info}
+                                        points_earned={data.points_earned}
+                                        points_converted={data.points_converted}
+                                        current_points_in_wallet={data.current_points_in_wallet}
+                                        transaction_type={data.transaction_type}
+                                        reference={data.reference}
+                                    />
+                                )
+                            })
+                        }
+                    </tbody>
                 </table>
             </CustomBox>
         </>

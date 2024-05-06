@@ -234,94 +234,95 @@ const VechileCategory = () => {
                 <table style={{
                     width: "104.25%",
                     marginLeft: "-23px",
-                }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        TableData.map((props, index) => {
-                            return (
-                                <tr style={{
-                                    textAlign: "left",
-                                    marginTop: "10px",
-                                }}>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
+                }}> <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            TableData.map((props, index) => {
+                                return (
+                                    <tr style={{
+                                        textAlign: "left",
+                                        marginTop: "10px",
                                     }}>
-                                        {props.sl}
-                                    </td>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#21888f"
-                                    }}>
-                                        <a href="/users/delivery-man/vehicle/view/2">
-                                            {props.type}
-                                        </a>
-                                    </td>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
-                                    }}>
-                                        {props.totalDeliveryMan}
-                                    </td>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
-                                    }}>
-                                        {props.minCoverageArea}
-                                    </td>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
-                                    }}>
-                                        {props.maxCoverageArea}
-                                    </td>
-                                    <td style={{
-                                        paddingLeft: "20px",
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
-                                    }}>
-                                        <Switch
-                                            defaultChecked={props.status === "Active" ? true : false}
-                                            sx={{
-                                                padding: "10px",
-                                            }}
-                                        />
-                                    </td>
-                                    <td style={{
-                                        paddingTop: "20px",
-                                        fontSize: "14px",
-                                        color: "#677788"
-                                    }}>
-                                        {ActionList(props.actions)}
-                                    </td>
-                                </tr>
-                            )
-                        })
-                    }
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            {props.sl}
+                                        </td>
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#21888f"
+                                        }}>
+                                            <a href="/users/delivery-man/vehicle/view/2">
+                                                {props.type}
+                                            </a>
+                                        </td>
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            {props.totalDeliveryMan}
+                                        </td>
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            {props.minCoverageArea}
+                                        </td>
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            {props.maxCoverageArea}
+                                        </td>
+                                        <td style={{
+                                            paddingLeft: "20px",
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            <Switch
+                                                defaultChecked={props.status === "Active" ? true : false}
+                                                sx={{
+                                                    padding: "10px",
+                                                }}
+                                            />
+                                        </td>
+                                        <td style={{
+                                            paddingTop: "20px",
+                                            fontSize: "14px",
+                                            color: "#677788"
+                                        }}>
+                                            {ActionList(props.actions)}
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
                 </table>
 
             </CustomBox>

@@ -2,7 +2,6 @@
 import CustomBox from '@/components/Shared/CustomComponents/CustomBox'
 import PageHeader from '@/components/Shared/PageHeader'
 import { Autocomplete, Menu, MenuItem, Select, TextField, Typography, styled } from '@mui/material'
-import Image from 'next/image'
 import React from 'react'
 import { BiDownload, BiSearch } from 'react-icons/bi'
 import { FaSortAmountDown, FaUserAlt } from 'react-icons/fa'
@@ -246,11 +245,11 @@ const AccountTransaction = () => {
                             alignItems: "center",
                         }}
                     >
-                        <Typography variant="p" fontSize={"16px"} fontWeight={"600"}>
+                        <Typography variant="body2" fontSize={"16px"} fontWeight={"600"}>
                             Transaction History
                         </Typography>
                         <Typography
-                            variant="p"
+                            variant="body2"
                             fontSize={"12px"}
                             fontWeight={"600"}
                             padding={"5px"}
@@ -305,33 +304,35 @@ const AccountTransaction = () => {
                     width: "105.25%",
                     marginLeft: "-23px",
                 }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        RowData.map((data, index) => {
-                            return (<TableRow
-                                key={index}
-                                sl={data.sl}
-                                collect_from={data.collect_from}
-                                type={data.type}
-                                received_at={data.received_at}
-                                amount={data.amount}
-                                reference={data.reference}
-                            />)
-                        })
-                    }
+                    <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            RowData.map((data, index) => {
+                                return (<TableRow
+                                    key={index}
+                                    sl={data.sl}
+                                    collect_from={data.collect_from}
+                                    type={data.type}
+                                    received_at={data.received_at}
+                                    amount={data.amount}
+                                    reference={data.reference}
+                                />)
+                            })
+                        }
+                    </tbody>
                 </table>
             </CustomBox>
         </>

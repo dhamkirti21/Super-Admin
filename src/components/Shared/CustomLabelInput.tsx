@@ -12,19 +12,14 @@ const CustomLabelInput = (props: CustomLabelInputProps) => {
                 <div style={{
                     display: "flex",
                     flexDirection: "row",
+                    paddingBottom: "8px",
                     marginTop: "8px"
                 }}>
-                    <div className='flex flex-row gap-2'>
+                    <div className='flex flex-row gap-4'>
                         <label style={{
                             fontSize: "12px"
                         }}>{props.label}</label>
-
                     </div>
-                    <p style={{
-                        color: "red",
-                        fontSize: "14px",
-                        marginLeft: "5px"
-                    }}>*</p>
                 </div>
                 {props.input}
             </div>

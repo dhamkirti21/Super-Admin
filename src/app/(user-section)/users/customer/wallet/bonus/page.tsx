@@ -214,38 +214,39 @@ const page = () => {
                 <table style={{
                     width: "104.25%",
                     marginLeft: "-23px",
-                }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        RowData.map((data, index) => {
-                            return (
-                                <TableRowBonus
-                                    key={index}
-                                    sl={data.sl}
-                                    bonus_title={data.bonus_title}
-                                    bonus_info={data.bonus_info}
-                                    bonus_amount={data.bonus_amount}
-                                    started_on={data.started_on}
-                                    expire_on={data.expire_on}
-                                    status={data.status}
-                                    action={data.action}
-                                />
-                            )
-                        })
-                    }
+                }}> <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
+                                return (
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            RowData.map((data, index) => {
+                                return (
+                                    <TableRowBonus
+                                        key={index}
+                                        sl={data.sl}
+                                        bonus_title={data.bonus_title}
+                                        bonus_info={data.bonus_info}
+                                        bonus_amount={data.bonus_amount}
+                                        started_on={data.started_on}
+                                        expire_on={data.expire_on}
+                                        status={data.status}
+                                        action={data.action}
+                                    />
+                                )
+                            })
+                        }
+                    </tbody>
                 </table>
 
             </CustomBox>

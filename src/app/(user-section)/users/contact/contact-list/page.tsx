@@ -65,35 +65,36 @@ const page = () => {
                 <table style={{
                     width: "104.25%",
                     marginLeft: "-23px",
-                }}>
-                    <tr style={{
-                        backgroundColor: "#f8fafd",
-                    }}>
-                        {titles.map((title, index) => {
-                            return (
-                                <th key={index} style={{
-                                    fontSize: "12px",
-                                    padding: "16px",
-                                    color: "#334257",
-                                    textAlign: "left",
-                                }}>{title}</th>
-                            )
-                        })}
-                    </tr>
-                    {
-                        RowData.length !== 0 ? (
-                            RowData.map((data: any, index: number) => {
+                }}> <tbody>
+                        <tr style={{
+                            backgroundColor: "#f8fafd",
+                        }}>
+                            {titles.map((title, index) => {
                                 return (
-                                    <TableRowSub
-                                        key={index}
-                                        sl={data.sl}
-                                        email={data.email}
-                                        created_at={data.created_at}
-                                    />
-                                );
-                            })
-                        ) : null
-                    }
+                                    <th key={index} style={{
+                                        fontSize: "12px",
+                                        padding: "16px",
+                                        color: "#334257",
+                                        textAlign: "left",
+                                    }}>{title}</th>
+                                )
+                            })}
+                        </tr>
+                        {
+                            RowData.length !== 0 ? (
+                                RowData.map((data: any, index: number) => {
+                                    return (
+                                        <TableRowSub
+                                            key={index}
+                                            sl={data.sl}
+                                            email={data.email}
+                                            created_at={data.created_at}
+                                        />
+                                    );
+                                })
+                            ) : null
+                        }
+                    </tbody>
                 </table>
                 {
                     RowData.length === 0 && (

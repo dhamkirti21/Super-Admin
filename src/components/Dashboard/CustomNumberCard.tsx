@@ -1,7 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image';
 import React from 'react'
-import { ImTerminal } from 'react-icons/im'
 
 
 type numberType = "Red" | "Green" | "Grey";
@@ -40,8 +39,8 @@ const CustomNumberCard = (props: CustomNumberCardProps) => {
                     gap: "20px",
                 }}
             >
-                <Image src={props.icon} width={25} height={25} alt={props.title} />
-                <Typography variant="p" fontWeight={"395"} fontSize={"16px"}>{props.title}</Typography>
+                <Image loading="lazy" src={props.icon} width={25} height={25} alt={props.title} />
+                <Typography variant="body2" fontWeight={"395"} fontSize={"16px"}>{props.title}</Typography>
             </div>
             <Typography variant="p" color={color} fontWeight={"bold"} ontSize={"20px"}>{props.value}</Typography>
         </Box>

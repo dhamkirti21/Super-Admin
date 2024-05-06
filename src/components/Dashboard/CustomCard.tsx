@@ -24,7 +24,7 @@ const CustomCard = (props: CustomCardProps) => {
                 boxShadow: "1px 1.5px 1.5px 1px rgba(0, 0, 0, 0.1)",
             }}
         >
-            <Image src={props.icon} width={50} height={50} alt="items" />
+            <Image loading="lazy" src={props.icon} width={50} height={50} alt="items" />
             <Typography variant="p" fontWeight={"bold"} fontSize={"14px"}>{props.title}</Typography>
             <Typography variant="h4" fontWeight={"bold"}>{props.value}</Typography>
             <Typography variant="p" fontSize={"12px"} fontWeight={"bold"} color={"#9d9d9d"}>{props.newAdded} Newly  Added</Typography>

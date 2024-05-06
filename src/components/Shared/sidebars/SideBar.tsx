@@ -5,12 +5,14 @@ import { IoIosHome, IoMdAddCircle, IoMdDownload, IoMdNotifications } from "react
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { RiBillLine } from "react-icons/ri";
 import { BsFillGrid1X2Fill, BsFillGrid3X3GapFill, BsGrid3X3GapFill } from "react-icons/bs";
-import { FaFire, FaRegWindowRestore } from "react-icons/fa6";
+import { FaFire, FaPerson, FaRegWindowRestore } from "react-icons/fa6";
 import { CiGift } from "react-icons/ci";
 import { SlCalender, SlReload } from "react-icons/sl";
-import { MdOutlineAccountTree, MdUpload } from "react-icons/md";
+import { MdOutlineAccountTree, MdOutlineSignalWifi0Bar, MdUpload } from "react-icons/md";
 import { TfiRulerAlt } from "react-icons/tfi";
 import { PiDiamondBold } from "react-icons/pi";
+import NestedList from "../NestedList";
+import { GiCheckboxTree } from "react-icons/gi";
 
 
 
@@ -157,22 +159,43 @@ const SideBar = () => {
                             gap: "10px",
                             marginTop: "20px"
                         }}>
-                            <div className={styles.leftItem}>
+                            {/* <div className={styles.leftItem}>
                                 <MdOutlineAccountTree size={20} />
                                 <p>Categories</p>
-                            </div>
+                            </div> */}
+                            <NestedList
+                                title="Category"
+                                icon={<GiCheckboxTree size={20} color={"white"} />}
+                                nestedTitles={["Category", "Sub Category", "Bulk Import", "Bulk Export"]}
+                                links={["/category/add?position=0",
+                                    "/category/add?position=1",
+                                    "/category/bulk-import",
+                                    "/category/bulk-export"]}
+                            />
                             <div className={styles.leftItem}>
                                 <BsFillGrid3X3GapFill size={20} />
-                                <p>Attributes</p>
+                                <a href="/attribute">
+                                    <p>Attributes</p>
+                                </a>
                             </div>
                             <div className={styles.leftItem}>
                                 <TfiRulerAlt size={20} />
-                                <p>Units</p>
+                                <a href="/unit">
+                                    <p>Units</p>
+                                </a>
                             </div>
-                            <div className={styles.leftItem}>
-                                <BiDiamond size={20} />
-                                <p>Product Setup</p>
-                            </div>
+                            <NestedList
+                                title="Product Setup"
+                                icon={<MdOutlineSignalWifi0Bar size={20} color={"white"} />}
+                                nestedTitles={["Add New", "List", "Produt Gallery", "New Item Request", "Review", "Bulk Import", "Bulk Export"]}
+                                links={["/item/add-new",
+                                    "/item/list",
+                                    "/item/product-gallery",
+                                    "/item/new/item/list",
+                                    "/item/reviews",
+                                    "/item/bulk-import",
+                                    "/item/bulk-export"]}
+                            />
                         </div>
                     </div>
                     <div style={{
@@ -201,19 +224,27 @@ const SideBar = () => {
                             </div>
                             <div className={styles.leftItem}>
                                 <BsFillGrid1X2Fill size={20} />
-                                <p>Stores List</p>
+                                <a href="/store/list">
+                                    <p>Stores List</p>
+                                </a>
                             </div>
                             <div className={styles.leftItem}>
                                 <FaFire size={20} />
-                                <p>Recommended Stores</p>
+                                <a href="/store/recommended-store">
+                                    <p>Recommended Stores</p>
+                                </a>
                             </div>
                             <div className={styles.leftItem}>
                                 <MdUpload size={20} />
-                                <p>Bulk Import</p>
+                                <a href="/store/bulk-import">
+                                    <p>Bulk Import</p>
+                                </a>
                             </div>
                             <div className={styles.leftItem}>
                                 <IoMdDownload size={20} />
-                                <p>Bulk Export</p>
+                                <a href="/store/bulk-export">
+                                    <p>Bulk Export</p>
+                                </a>
                             </div>
                         </div>
                     </div>
