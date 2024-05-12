@@ -23,7 +23,7 @@ interface DataboxProps {
     backgroundColor: string
 }
 
-const page = () => {
+const Page = () => {
     const DataBox = ({
         title,
         value,
@@ -133,9 +133,8 @@ const page = () => {
                     {
                         DataBoxdata.map((data, index) => {
                             return (
-                                <div className="flex flex-row-gap-2">
+                                <div className="flex flex-row-gap-2" key={index}>
                                     <DataBox
-                                        key={index}
                                         title={data.title}
                                         value={data.value}
                                         icon={
@@ -283,4 +282,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

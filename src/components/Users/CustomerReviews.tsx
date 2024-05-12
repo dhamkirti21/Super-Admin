@@ -54,12 +54,12 @@ const reviewRatingComponent = (percentage: number, title: string) => {
                 >
                     {[...Array(totalGreen)].map((e, i) => {
                         return (
-                            <FaUser size={10} color={"#00aa6d"} />
+                            <FaUser size={10} color={"#00aa6d"} key={i} />
                         )
                     })}
                     {[...Array(totalGrey)].map((e, i) => {
                         return (
-                            <FaUser size={10} color={"#e8ebf3"} />
+                            <FaUser size={10} color={"#e8ebf3"} key={i} />
                         )
                     })}
                 </Box>

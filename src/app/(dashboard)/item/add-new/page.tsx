@@ -10,7 +10,7 @@ import { CiShoppingTag } from 'react-icons/ci'
 import { GrClipboard } from 'react-icons/gr'
 import { LuSettings2 } from 'react-icons/lu'
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <div className="p-2 flex flex-row justify-between">
@@ -329,4 +329,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

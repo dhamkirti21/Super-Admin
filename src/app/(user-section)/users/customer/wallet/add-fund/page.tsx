@@ -6,7 +6,7 @@ import { Autocomplete, TextField } from '@mui/material'
 import React from 'react'
 import { TbMoneybag } from 'react-icons/tb'
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <div
@@ -128,4 +128,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

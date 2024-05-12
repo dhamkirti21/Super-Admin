@@ -8,7 +8,7 @@ import React from 'react'
 import { BsGrid1X2Fill } from 'react-icons/bs'
 import { FaUser } from 'react-icons/fa6'
 
-const page = () => {
+const Page = () => {
 
 
     interface CustomButtonProps {
@@ -504,4 +504,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

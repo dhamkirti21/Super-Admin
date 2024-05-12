@@ -6,7 +6,7 @@ import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { CgSortAz } from 'react-icons/cg'
 
-const page = () => {
+const Page = () => {
 
     const pagination = (title: string, link: string, active: boolean) => {
         return (
@@ -152,4 +152,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

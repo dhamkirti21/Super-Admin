@@ -8,7 +8,7 @@ import Image from 'next/image'
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 
-const page = () => {
+const Page = () => {
 
     const titles = [
         "SL",
@@ -77,7 +77,7 @@ const page = () => {
                     <div className='flex flex-row gap-4'>
                         <div className='text-small flex items-center'>
                             <Radio sx={{ fontSize: "12px" }} />
-                            <Typography variant="body2">Shuffle store when page reload</Typography>
+                            <Typography variant="body2">Shuffle store when Page reload</Typography>
                         </div>
                         <div className='flex flex-row gap-0'>
                             <TextField
@@ -119,4 +119,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

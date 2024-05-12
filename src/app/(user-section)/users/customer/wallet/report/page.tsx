@@ -11,7 +11,7 @@ import { CiDollar } from 'react-icons/ci'
 import TableRowReport from './TableRowReport'
 
 
-const page = () => {
+const Page = () => {
 
     const DataBox = (props: any) => {
         return (
@@ -267,4 +267,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -10,7 +10,7 @@ import Image from 'next/image'
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 
-const page = () => {
+const Page = () => {
 
 
     const titles = [
@@ -126,4 +126,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

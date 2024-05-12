@@ -13,11 +13,12 @@ import { useDropzone } from 'react-dropzone'
 import CustomTable, { ActionList, CustomTableRow } from '@/components/Shared/CustomComponents/CustomTable'
 import { useSearchParams } from 'next/navigation'
 
-const page = () => {
+const Page = () => {
 
-    const [image, setImage] = React.useState(null);
+    // const [image, setImage] = React.useState(null);
 
     const onDrop = useCallback(acceptedFiles => {
+        console.log("Gel")
     }, [])
 
     const searchParams = useSearchParams();
@@ -216,4 +217,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

@@ -252,7 +252,7 @@ const VechileCategory = () => {
                         {
                             TableData.map((props, index) => {
                                 return (
-                                    <tr style={{
+                                    <tr key={index} style={{
                                         textAlign: "left",
                                         marginTop: "10px",
                                     }}>

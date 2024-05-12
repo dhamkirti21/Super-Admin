@@ -8,7 +8,7 @@ import { Autocomplete, Tab, Table, TextField, Typography, styled } from '@mui/ma
 import React from 'react'
 import { BiDownload, BiSearch } from 'react-icons/bi'
 
-const page = () => {
+const Page = () => {
 
     const CustomSearchButton = styled('button')({
         display: 'flex',
@@ -214,4 +214,4 @@ const page = () => {
     );
 } // Add a comma here
 
-export default page
+export default Page

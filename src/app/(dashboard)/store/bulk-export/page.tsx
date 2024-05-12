@@ -7,7 +7,7 @@ import { Autocomplete, Radio, RadioGroup, TextField, ToggleButton, ToggleButtonG
 import Image from 'next/image'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
 
     const Instruction = ({ stepNumber, icon, subtitle, instructions }: any) => {
         return (
@@ -76,9 +76,9 @@ const page = () => {
                     {
                         steps.map((step, index) => {
                             return (
-                                <div className="p-6 border-2 border-slate-400 rounded-md">
+                                <div className="p-6 border-2 border-slate-400 rounded-md" key={index}>
                                     <Instruction
-                                        key={index}
+
                                         stepNumber={step.stepNumber}
                                         icon={
                                             <Image
@@ -144,4 +144,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

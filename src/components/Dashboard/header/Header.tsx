@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.headerLogo}>
-                <Image loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" loading="lazy" src="/images/logo.png" width={130} height={40} style={{ objectFit: "cover" }} alt="logo" />
+                <Image loading="lazy" src="/images/logo.png" width={130} height={40} style={{ objectFit: "cover" }} alt="logo" />
             </div>
             <div className={styles.headerCenter}>
                 <div className={styles.headerItem}>

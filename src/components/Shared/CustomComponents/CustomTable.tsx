@@ -2,6 +2,7 @@ import { styled } from '@mui/material';
 import React from 'react'
 import { BiPencil } from 'react-icons/bi';
 import { BsEyeFill } from 'react-icons/bs';
+import { FaDownload } from 'react-icons/fa6';
 import { MdDeleteForever } from 'react-icons/md';
 
 
@@ -108,6 +109,18 @@ export const ActionList = (actions: string[]) => {
                         hoverBackgroundColor={"#14b09d"}
                     >
                         <BiPencil size={16} />
+                    </CustomIconButton>
+                )
+            }
+            {
+                actions.find(action => action === "Generate Invoice") && (
+                    <CustomIconButton
+                        backgroundColor={"#white"}
+                        Color={"#20a7af"}
+                        hoverColor={"white"}
+                        hoverBackgroundColor={"#20a7af"}
+                    >
+                        <FaDownload size={16} />
                     </CustomIconButton>
                 )
             }

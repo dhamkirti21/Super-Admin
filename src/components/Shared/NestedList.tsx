@@ -9,7 +9,8 @@ import { TbPointFilled } from 'react-icons/tb'
 
 interface NestedListProps {
     title: string,
-    icon: React.ReactNode,
+    icon?: React.ReactNode,
+    count?: number,
     nestedTitles: string[],
     links: string[]
 }
@@ -31,27 +32,35 @@ const NestedList = (props: NestedListProps) => {
                     display: "flex",
                     flexDirection: "row",
                     gap: "20px",
-                    alignItems: "center"
+                    alignItems: "center",
 
                 }}>
-                    {/* <FaWallet size={20} color={"white"} /> */}
-                    {props.icon}
-                    <p style={{
-                        fontSize: "14px",
-                        overflow: "hidden",
-                        position: "relative",
-                        left: "-5px",
-                        whiteSpace: "nowrap",
-                        textOverflow: "ellipsis",
-                    }}>{props.title}</p>
-                    {open ? <MdExpandLess /> : <MdExpandMore />}
+                    <div className="flex flex-row items-center gap-6 overflow-hidden">
+                        {props.icon}
+                        <p style={{
+                            fontSize: "14px",
+                            overflow: "hidden",
+                            position: "relative",
+                            left: "-5px",
+                            whiteSpace: "nowrap",
+                            textOverflow: "ellipsis",
+                        }}>{props.title}</p>
+                        {
+                            props.count ? <div className={styles.count}>
+                                <p>{props.count}</p>
+                            </div> : null
+                        }
+                    </div>
+                    <div className='ml-12'>
+                        {open ? <MdExpandLess /> : <MdExpandMore />}
+                    </div>
                 </div>
             </ListItemButton >
             <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                     {
                         props.nestedTitles.map((nestedTitle, index) => {
-                            return (<ListItemButton sx={{ pl: 4 }}>
+                            return (<ListItemButton sx={{ pl: 4 }} key={index}>
                                 <div style={{
                                     display: "flex",
                                     flexDirection: "row",

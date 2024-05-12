@@ -10,7 +10,7 @@ import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import TableRowList from './TableRowBonus'
 
-const page = () => {
+const Page = () => {
 
     const titles = [
         "SL",
@@ -120,4 +120,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

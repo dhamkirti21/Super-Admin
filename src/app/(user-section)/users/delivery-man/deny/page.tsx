@@ -6,7 +6,7 @@ import React from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { CgSortAz } from 'react-icons/cg'
 
-const page = () => {
+const Page = () => {
 
     const CustomSearchButton = styled('button')({
         display: 'flex',
@@ -151,4 +151,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

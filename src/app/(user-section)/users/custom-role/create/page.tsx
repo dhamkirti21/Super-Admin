@@ -7,7 +7,7 @@ import { Checkbox, TextField, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
 
     const items = [
         "Collect cash",
@@ -126,4 +126,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

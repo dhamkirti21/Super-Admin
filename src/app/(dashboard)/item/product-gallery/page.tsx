@@ -8,7 +8,7 @@ import Image from 'next/image'
 import React from 'react'
 import ProductCard from './ProductCard'
 
-const page = () => {
+const Page = () => {
 
     const products = [
         {
@@ -124,4 +124,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

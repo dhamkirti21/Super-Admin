@@ -6,7 +6,7 @@ import Image from 'next/image'
 import React from 'react'
 import { FaUser } from 'react-icons/fa6'
 
-const page = () => {
+const Page = () => {
 
     interface CustomButtonProps {
         backgroundColor: string;
@@ -466,4 +466,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

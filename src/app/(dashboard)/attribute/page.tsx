@@ -31,7 +31,7 @@ const page = () => {
         return (
             <>
                 {
-                    RowData.map((data, index) => {
+                    RowData.map((data: any, index: number) => {
                         return (
                             <tr key={index}>
                                 <CustomTableRow>
