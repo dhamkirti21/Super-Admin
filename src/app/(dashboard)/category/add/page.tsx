@@ -17,7 +17,7 @@ const Page = () => {
 
     // const [image, setImage] = React.useState(null);
 
-    const onDrop = useCallback(acceptedFiles => {
+    const onDrop = useCallback((acceptedFiles: object) => {
         console.log("Gel")
     }, [])
 
@@ -61,11 +61,11 @@ const Page = () => {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
 
-    const TableRow = (RowData: any) => {
+    const TableRow = (RowData: object[]) => {
         return (
             <>
                 {
-                    RowData.map((item, index) => {
+                    RowData.map((item: object, index: number) => {
                         return (
                             <tr key={index}>
                                 <CustomTableRow>
